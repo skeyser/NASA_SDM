@@ -1,10 +1,10 @@
 #Hi Git
 library("pacman")
-pacman::p_load("tidyverse", "data.table")
+pacman::p_load("tidyverse", "data.table", "here")
 
 getwd()
-setwd("C:/Users/skeyser/Box Sync/UW-Madison PhD/NASA Project/Mammal_Data")
-fur <- read.csv("furbearer_harvest_counts.csv", header = F)
+#setwd("C:/Users/skeyser/Box Sync/UW-Madison PhD/NASA Project/Mammal_Data")
+fur <- read.csv(here::here("Data/furbearer_harvest_counts.csv"), header = F)
 
 #Take a look at what is in this file
 names(fur) <- c("ID", "state", "season", "count", "species", "geo_ref", 
